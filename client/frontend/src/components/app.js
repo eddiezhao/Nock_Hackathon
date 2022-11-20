@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
         <button>
-            <Navigation />
+            <a href="../pages/login">Get Started</a>
         </button>
       {/* <h1> yes </h1>
       <Router>
