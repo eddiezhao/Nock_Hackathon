@@ -1,26 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Form from './forms';
-import { Navigation } from "./components/navigation";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from '../pages/login';
+import Home from '../pages/home';
+import Layout from '../pages/layout';
 
 
 function App() {
   return (
+    <>
     <div>
-        <button>
-            <a href="../pages/login">Get Started</a>
-        </button>
-      {/* <h1> yes </h1>
-      <Router>
-        <Layout>
-          <Switch>
-            <Route path={'/AboutUs'} component={AboutUs}></Route>
-            <Route path={'/ContactUs'} component={ContactUs}></Route>
-            <Route path={'/'} component={Home}></Route>
-          </Switch>
-        </Layout>
-      </Router> */}
-    </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<Home />} />
+                    <Route path="login" element={<Login />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    </div></>
   )
 }
 
