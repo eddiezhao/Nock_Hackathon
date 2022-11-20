@@ -3,7 +3,7 @@ import { withAuthenticationRequired } from '@auth0/auth0-react';
 
 function Home() {
     return (
-        <h1>this is the homepage</h1>
+        <h1>Welcome to Nock!</h1>
     );
 }
 
