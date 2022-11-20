@@ -1,4 +1,5 @@
 import React from 'react';
+import { withAuthenticationRequired } from '@auth0/auth0-react';
 
 function Home() {
     return (
@@ -6,4 +7,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default withAuthenticationRequired(Home);
